@@ -6,8 +6,8 @@ exports[`Testing component GifItem Should be a match with the snapshot 1`] = `
     class="card"
   >
     <img
-      alt=""
-      src="https://my-messi.gif"
+      alt="Messi"
+      src="https://my-messi.gif/"
     />
     <p>
       Messi
