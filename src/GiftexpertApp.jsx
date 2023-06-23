@@ -1,13 +1,5 @@
 import { useState } from "react";
-import { AddCategory } from "./components/AddCategory";
-
-// const generateFakeCategories = async () => {
-//   const resp = await fetch(`https://randomuser.me/api/`);
-//   const { results } = await resp.json();
-//   const { first, last } = results[0].name;
-//   return `${first} ${last}`;
-// };
-
+import { GifGrid, AddCategory } from "./components";
 export const GiftexpertApp = () => {
   const [categories, setCategories] = useState(["One punch", "Dragon Ball"]);
   const onAddNewCategory = (value) => {
@@ -25,12 +17,9 @@ export const GiftexpertApp = () => {
         onNewCategory={onAddNewCategory}
       />
 
-      {/* Gift List */}
-      <ol>
-        {categories.map((category) => {
-          return <li key={category}>{category}</li>;
-        })}
-      </ol>
+      {categories.map((category) => (
+        <GifGrid key={category} category={category} />
+      ))}
     </>
   );
 };
